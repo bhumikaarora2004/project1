@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Recipe Recommendations</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/recipes">Recipes</a>
+        <a href="/about">About</a>
+    </nav>
+    <main>
+        <section id="recommendations-section">
+            <h2>Recommendations for '{{ preference }}'</h2>
+            <ul>
+                {% for recipe in recipes %}
+                <li>
+                    <img src="{{ recipe.image_url }}" alt="{{ recipe.title }}">
+                    <h3>{{ recipe.title }}</h3>
+                    <p><strong>Ingredients:</strong> {{ recipe.ingredients }}</p>
+                    <p><strong>Instructions:</strong> {{ recipe.instructions }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+            {% if message %}
+            <p>{{ message }}</p>
+            {% endif %}
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Recipe Recommendation. All rights reserved.</p>
+    </footer>
+</body>
+</html>

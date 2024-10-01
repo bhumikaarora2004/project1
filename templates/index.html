@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Recommendation</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Recipe Recommendation</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/recipes">Recipes</a>
+                <a href="/about">About</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="form-section">
+            <form id="preference-form" action="/recommendations" method="get">
+                <label for="ingredient">FIND THE PERFECT RECIPE(Enter an ingredient:)</label>
+                <input type="text" id="ingredient" name="ingredient" placeholder="e.g., chicken, tomato">
+                <button type="submit">Get Recommendations</button>
+            </form>
+        </section>
+        <section class="featured-recipes">
+            <h2>Featured Recipes</h2>
+            <div class="recipes-grid">
+                <div class="recipe-card">
+                    <img src="\static\recipe1.png" alt="Recipe 1">
+                    <h3>Sterling Cooper Blini with Caviar</h3>
+                    
+                </div>
+                <div class="recipe-card">
+                    <img src="\static\recipe2.png" alt="Recipe 2">
+                    <h3>Spicy Lemongrass Soup</h3>
+                    
+                </div>
+                <div class="recipe-card">
+                    <img src="\static\recipe3.png" alt="Recipe 3">
+                    <h3>Asian Salmon Burgers With Tangy Ginger Lime Sauce</h3>
+                    
+                </div>
+            </div>
+      
+    </main>
+    <footer>
+        <p>&copy; 2024 Recipe Recommendation. All rights reserved.</p>
+    </footer>
+</body>
+</html>
